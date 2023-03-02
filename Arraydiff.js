@@ -9,8 +9,9 @@ It should remove all values from list a, which are present in list b keeping the
 
 function arrayDiff(arrayA, arrayB) {
     const newArray = [];
-    newArray.push(arrayA.filter(item => !(arrayB.includes(item))))
-    return newArray;
+    newArray.push(arrayA.filter(item => !(arrayB.includes(item))));
+    const lastArray = newArray.flat(1);
+    return lastArray;
 }   
  
 console.log(arrayDiff([1,2,3], [1,2]));     // [3]
